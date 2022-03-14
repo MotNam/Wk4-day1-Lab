@@ -3,7 +3,7 @@
     <!-- iteration 1 -->
     <p>New Component</p>
     <NewVueComp />
-    
+
 <!-- 　　iteration 2  -->
 <span>Message:{{message}} </span>
     <!-- iteration 3 -->
@@ -11,9 +11,14 @@
 
 <!-- iteration 4 -->
 <div>
-<a href="/views/AboutView.vue"> About Page</a><br>
+  <router-link to="home">Home</router-link>
+  <router-link to="about/1/2/3">About</router-link>
+  <router-view/>
 
-<a href="/views/HomeView.vue"> Home Page</a>
+
+
+<!-- <a :href="link"> About Page</a><br>
+<a :href="link"> Home Page</a> -->
 </div>
   </div>
 
@@ -30,6 +35,7 @@ export default {
    data() {
     return {
       message:'Text Interpolation',
+    
   }
   },
    methods: {
